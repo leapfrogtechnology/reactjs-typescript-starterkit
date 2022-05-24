@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# run test in no watch mode
 npm run testall
+
+# formats staged files codes as configured in .lintstagedrc
 npx lint-staged

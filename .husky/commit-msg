@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# npx --no: to suppress install prompt if requested package is not in project dependencies
+# commitlint --edit: commitlint reads from stdin if --edit, --env, --from and --to are omitted
+npx --no -- commitlint --edit "\${1}"
